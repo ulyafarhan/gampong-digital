@@ -17,7 +17,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status }) {
 
     const submit = (e) => {
         e.preventDefault();
-        // Panggil method 'patch'
+        // Panggil method 'patch' yang sesuai dengan route 'profile.update'
         patch(route('profile.update'));
     };
 

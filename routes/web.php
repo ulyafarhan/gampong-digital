@@ -47,9 +47,9 @@ Route::get('/kegiatan', [PageController::class, 'kegiatanIndex'])->name('kegiata
 Route::get('/profil-gampong', [PageController::class, 'profilGampong'])->name('profil.gampong');
 
 
-// Rute untuk Asisten Virtual 'Ceurdas'
-Route::post('/ask-ceurdas', [CeurdasController::class, 'ask'])->name('ceurdas.ask');
 
+// Rute untuk Asisten Virtual 'Ceurdas'
+Route::post('/ceurdas/ask', [CeurdasController::class, 'ask'])->name('ceurdas.ask');
 
 /*
 |--------------------------------------------------------------------------
