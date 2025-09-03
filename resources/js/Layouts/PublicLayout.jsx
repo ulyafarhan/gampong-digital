@@ -58,6 +58,7 @@ export default function PublicLayout({ children, title }) {
                                <NavLink href={route('panduan.index')} className={`text-sm font-semibold ${linkClass}`}>Panduan</NavLink>
                                <NavLink href={route('kegiatan.index')} className={`text-sm font-semibold ${linkClass}`}>Kegiatan</NavLink>
                                <NavLink href={route('galeri.index')} className={`text-sm font-semibold ${linkClass}`}>Galeri</NavLink>
+                               <NavLink href={route('profil.gampong')} className={`text-sm font-semibold ${linkClass}`}>Profil</NavLink>
                             </nav>
 
                             {/* Tombol Hamburger Menu (Hanya tampil di layar kecil) */}
@@ -80,6 +81,7 @@ export default function PublicLayout({ children, title }) {
                                                 <SheetClose asChild><NavLink href={route('panduan.index')} className="text-lg font-semibold text-gray-800 dark:text-gray-200">Panduan</NavLink></SheetClose>
                                                 <SheetClose asChild><NavLink href={route('kegiatan.index')} className="text-lg font-semibold text-gray-800 dark:text-gray-200">Kegiatan</NavLink></SheetClose>
                                                 <SheetClose asChild><NavLink href={route('galeri.index')} className="text-lg font-semibold text-gray-800 dark:text-gray-200">Galeri</NavLink></SheetClose>
+                                                <SheetClose asChild><NavLink href={route('profil.gampong')} className="text-lg font-semibold text-gray-800 dark:text-gray-200">Profil Gampong</NavLink></SheetClose>
                                             </nav>
                                         </div>
                                     </SheetContent>
@@ -96,7 +98,7 @@ export default function PublicLayout({ children, title }) {
                 <footer className="py-8 bg-green-900 dark:bg-black text-green-200 border-t border-green-800">
                     <div className="max-w-7xl mx-auto text-center">
                         <p>© {new Date().getFullYear()} Pemerintah Gampong Udeung.</p>
-                        <p className="text-xs text-green-400 mt-1">Platform Digital Gampong Percontohan</p>
+                        <p className="text-xs text-green-400 mt-1">Platform Digital Gampong Udeung</p>
                     </div>
                 </footer>
 

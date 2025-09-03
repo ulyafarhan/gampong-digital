@@ -44,6 +44,8 @@ Route::get('/galeri', [PageController::class, 'galeriIndex'])->name('galeri.inde
 Route::get('/galeri/{album}', [PageController::class, 'galeriShow'])->name('galeri.show');
 Route::get('/panduan', [PageController::class, 'panduanIndex'])->name('panduan.index');
 Route::get('/kegiatan', [PageController::class, 'kegiatanIndex'])->name('kegiatan.index');
+Route::get('/profil-gampong', [PageController::class, 'profilGampong'])->name('profil.gampong');
+
 
 // Rute untuk Asisten Virtual 'Ceurdas'
 Route::post('/ask-ceurdas', [CeurdasController::class, 'ask'])->name('ceurdas.ask');

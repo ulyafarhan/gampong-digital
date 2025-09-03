@@ -77,4 +77,12 @@ class PageController extends Controller
                                             ->paginate(5),
         ]);
     }
+
+    public function profilGampong()
+    {
+        return Inertia::render('Public/ProfilGampong', [
+            'settings' => Setting::all()->pluck('value', 'key'),
+            'aparats' => Aparat::orderBy('urutan')->get(),
+        ]);
+    }
 }

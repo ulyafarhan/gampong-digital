@@ -52,20 +52,27 @@ export default function Home({ beritas, panduans, kegiatans, albumTerbaru }) {
 
             {/* Panduan Layanan */}
             <section id="panduan-warga" className="py-16 sm:py-20 bg-white dark:bg-gray-900">
-                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h2 className="text-3xl font-['Merriweather'] font-bold text-green-900 dark:text-white">Panduan Layanan Administrasi</h2>
                         <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Solusi "satu pintu" untuk semua kebutuhan birokrasi Anda.</p>
                     </div>
                     <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {panduans.map(panduan => (
-                            <Card key={panduan.id} className="text-center hover:shadow-xl transition-shadow">
-                                <CardHeader>
-                                    <BookOpen className="mx-auto h-12 w-12 text-green-700 dark:text-green-400"/>
-                                    <CardTitle className="mt-4">{panduan.judul}</CardTitle>
-                                </CardHeader>
-                            </Card>
+                            <Link href={route('panduan.index')} key={panduan.id}>
+                                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                    <CardHeader>
+                                        <BookOpen className="mx-auto h-12 w-12 text-green-700 dark:text-green-400"/>
+                                        <CardTitle className="mt-4  font-semibold">{panduan.judul}</CardTitle>
+                                    </CardHeader>
+                                </Card>
+                            </Link>
                         ))}
+                    </div>
+                    <div className="mt-8 text-center">
+                        <Button asChild variant="outline">
+                            <Link href={route('panduan.index')}>Lihat Semua Panduan <ArrowRight className="ml-2 h-4 w-4 text-green-700"/></Link>
+                        </Button>
                     </div>
                 </div>
             </section>
